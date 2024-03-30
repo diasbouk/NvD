@@ -12,3 +12,6 @@
     Then:
         git clone https://github.com/diasbouk/NvD.git ~/.config/nvim &&nvim 
         Dont forget to remove the .git directory
+
+# Setup 
+    You'll also need to do some updates : :TSInstallAll, :MasonUpdate :Lazy (U)
