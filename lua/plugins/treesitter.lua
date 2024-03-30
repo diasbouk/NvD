@@ -1,18 +1,12 @@
--- Syntax highlighting for languages
-
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			local configs = require "nvim-treesitter.configs"
-			configs.setup {
-				ensure_install = { "python", "javascript", "clangd", "c", "cpp" },
+	'nvim-treesitter/nvim-treesitter',
+	build = 'TSUpdate',
+	config = function()
+		local config = require("nvim-treesitter.configs")
+		config.setup({
+				ensure_installed = { "c", "lua", "vim", "vimdoc", "query" },
 				auto_install = true,
-				sync_install = false,
-				highlight = { enable = true },
-				indent = { enable = false },
-			}
-		end,
-	},
+				indent = { enable = true },
+			})
+		end
 }
